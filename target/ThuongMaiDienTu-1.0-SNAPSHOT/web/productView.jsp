@@ -47,7 +47,7 @@
             </li>
             <li>
                 <a>
-                    <c:out value="${category.name}"/>
+                    ${category.categoryName}
                 </a>
             </li>
         </ul>
@@ -57,15 +57,15 @@
             <!-- Catalog Categories - start -->
             <div class="section-sb-current">
                 <h3><a>
-                    <c:out value="${category.name}"/>
+                    ${category.categoryName}
                     <span id="section-sb-toggle"
                           class="section-sb-toggle">
                         <span
                                 class="section-sb-ico"></span></span></a></h3>
                 <ul class="section-sb-list" id="section-sb-list">
-                    <c:forEach var="item" items="${models}">
+                    <c:forEach var="item" items="${model}">
                         <li class="categ-1">
-                            <a href="/search-model" name="model">
+                            <a href="/search-model?id=<c:out value="${item.id}"/>">
                                 <span class="categ-1-label"><c:out value="${item.name}"/></span>
                             </a>
                         </li>
@@ -95,16 +95,14 @@
             </div>
             <!-- Catalog Topbar - end -->
             <div class="prod-items section-items">
-
                 <c:forEach var="item" items="${products}">
                     <div class="prod-i">
                         <div class="prod-i-top">
-                            <a href="#" class="prod-i-img"><!-- NO SPACE -->
-                                <img src="img\<c:out value="${item.image}"/>"><!-- NO SPACE --></a>
+                            <a class="prod-i-img"><!-- NO SPACE --><img src="img\<c:out value="${item.image}"/>" alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
                             <!--<p class="prod-i-info">
-                               a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                           </p>-->
-                            <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
+                                a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
+                            </p>-->
+                            <a href="cart-add?id=<c:out value="${item.id}"/>" class="prod-i-buy">Thêm vào giỏ</a>
                             <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
 
                             <div class="prod-i-properties">
@@ -114,7 +112,7 @@
                             </div>
                         </div>
                         <h3>
-                            <a href="#"><c:out value="${item.name}"/></a>
+                            <a><c:out value="${item.name}"/></a>
                         </h3>
                         <p class="prod-i-price">
                             <c:if test="${item.discount != null}">

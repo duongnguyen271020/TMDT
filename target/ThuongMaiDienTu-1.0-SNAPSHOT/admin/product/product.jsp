@@ -133,7 +133,7 @@
                         <td><c:out value='${item.name}'/></td>
                         <td><c:out value='${item.price}'/></td>
                         <td><c:out value='${item.discount}'/></td>
-                        <td><img style="width: 80px; height: auto" src="img/<c:out value='${item.image}'/>"></td>
+                        <td><img style="width: 80px; height: auto" src="img\<c:out value='${item.image}'/>"></td>
                         <td><c:out value='${item.description}'/></td>
                         <td><c:out value='${item.status == true ? "Còn hàng" : "Hết hàng"}'/></td>
                         <td><a href="/product/edit?id=<c:out value='${item.id}'/>">Edit</a><span>/ </span>

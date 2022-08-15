@@ -65,45 +65,45 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <c:forEach var="item" items="${carts}">
                     <tr>
                         <td class="cart-image">
-                            <a href="#">
-                                <img src="img/CPU/CPU.PNG">
+                            <a>
+                                <img src="img/<c:out value="${item.image}"/>">
                             </a>
                         </td>
                         <td class="cart-ttl">
-                            <a href="product.html">Intel Pentium Gold G5420</a>
+                            <a><c:out value="${item.productName}"/></a>
                         </td>
                         <td class="cart-price">
-                            <b>1,490,000 đ</b>
+                            <b><c:out value="${item.amount}"/></b>
                         </td>
                         <td class="cart-quantity">
                             <p class="cart-qnt">
-                                <input value="1" type="text">
-                                <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                                <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
+                                <input value="<c:out value="${item.quantity}"/>" type="text">
+                                <a href="cart-plus?id=<c:out value="${item.productID}"/>" class="cart-plus"><i class="fa fa-angle-up"></i></a>
+                                <a href="cart-sub?id=<c:out value="${item.productID}"/>" class="cart-minus"><i class="fa fa-angle-down"></i></a>
                             </p>
                         </td>
                         <td class="cart-summ">
-                            <b>1,490,000 đ</b>
-                            <p class="cart-forone">unit price <b>1,490,000 đ</b></p>
+                            <b><c:out value="${item.quantity * item.amount}"/></b>
                         </td>
                         <td class="cart-del">
-                            <a href="#" class="cart-remove"></a>
+                            <a href="/cart-delete?id=<c:out value="${item.productID}"/>" class="cart-remove"></a>
                         </td>
                     </tr>
-
+                    </c:forEach>
                     </tbody>
                 </table>
             </div>
-            <ul class="cart-total">
-                <li class="cart-summ">Tổng : <b>20,469,000 đ</b></li>
-            </ul>
+<%--            <ul class="cart-total">--%>
+<%--                <li class="cart-summ">Tổng : <b>20,469,000 đ</b></li>--%>
+<%--            </ul>--%>
             <div class="cart-submit">
                 <div class="cart-coupon">
                 </div>
-                <a href="#" class="cart-submit-btn">Thanh toán</a>
-                <a href="#" class="cart-clear">Clear cart</a>
+                <a href="/payment" class="cart-submit-btn">Thanh toán</a>
+                <a href="/cart-all-delete" class="cart-clear">Clear cart</a>
             </div>
         </form>
         <!-- Cart Items - end -->

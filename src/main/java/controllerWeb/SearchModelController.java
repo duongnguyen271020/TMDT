@@ -21,18 +21,25 @@ public class SearchModelController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
 
-        String textSearch = request.getParameter("category");
+        String id = request.getParameter("id");
 
         CategoryDAO categoryDAO = new CategoryDAO();
-        Model model = categoryDAO.getModelByName(textSearch);
-        Categories categories = categoryDAO.getItemCategory(model.getCategoryID());
-        List<Model> models = categoryDAO.getAllModelByCategoryID(model.getCategoryID());
+        Model model = categoryDAO.getItemModel(Long.parseLong(id));
+        Categories category = categoryDAO.getItemCategory(model.getCategoryID());
+        List<Model> model1 = categoryDAO.getAllModelByCategoryID(model.getCategoryID());
+
+        List<Categories> categories = categoryDAO.getAllCategory();
+        List<Model> models = categoryDAO.getAllModel();
+
+        request.setAttribute("categories", categories);
+        request.setAttribute("models", models);
 
         ProductDAO productDAO = new ProductDAO();
         List<Product> products = productDAO.findAllProductByModelID(model.getId());
 
-        request.setAttribute("category", categories);
-        request.setAttribute("models", model);
+        request.setAttribute("isShow", true);
+        request.setAttribute("category", category);
+        request.setAttribute("model", model1);
         request.setAttribute("products", products);
         request.getRequestDispatcher("/web/productView.jsp").forward(request, response);
     }

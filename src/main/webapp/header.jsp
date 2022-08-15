@@ -19,27 +19,26 @@
                     <ul>
                         <li class="topsearch">
                             <a id="topsearch-btn" class="topsearch-btn" href="#"><i class="fa fa-search"></i></a>
-                            <form class="topsearch-form" action="#">
-                                <input type="text" placeholder="Search products">
+                            <form class="topsearch-form" action="search">
+                                <input type="text" placeholder="Search products" name="textSearch">
                                 <button type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </li>
                         <li class="topauth">
-                            <a href="<c:url value="login"/>">
+                            <a href="/register">
                                 <i class="fa fa-lock"></i>
                                 <span class="shop-menu-ttl">Đăng kí</span>
                             </a>
-                            <a href="<c:url value="register"/>">
+                            <a href="/login">
                                 <span class="shop-menu-ttl">Đăng nhập</span>
                             </a>
                         </li>
 
                         <li>
                             <div class="h-cart">
-                                <a href="web/cart.jsp">
+                                <a href="/cart">
                                     <i class="fa fa-shopping-cart"></i>
-                                    <span class="shop-menu-ttl">Giỏ hàng</span> (
-                                    <b>0</b>)
+                                    <span class="shop-menu-ttl">Giỏ hàng</span>
                                 </a>
                             </div>
                         </li>
@@ -62,7 +61,7 @@
                     <ul class="topcatalog-list">
                         <c:forEach var="item" items="${categories}">
                             <li>
-                                <a name="category">
+                                <a>
                                     <c:out value="${item.categoryName}"/>
                                 </a>
                                 <i class="fa fa-angle-right"></i>
@@ -70,7 +69,7 @@
                                     <c:forEach var="model" items="${models}">
                                         <c:if test="${item.id == model.categoryID}">
                                             <li>
-                                                <a href="/search-model" name="model">
+                                                <a href="/search-model?id=<c:out value="${model.id}"/>">
                                                     <c:out value="${model.name}"/>
                                                 </a>
                                             </li>

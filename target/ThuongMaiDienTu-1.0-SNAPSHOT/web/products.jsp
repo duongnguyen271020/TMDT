@@ -14,15 +14,15 @@
             <div class="fr-slider">
                 <ul class="slides">
                     <li>
-                        <img src="img/banner/tivi.png" alt="">
+                        <img src="img/banner/slideshow_1.webp" alt="">
 
                     </li>
                     <li>
-                        <img src="img/banner/dieuhoa.png" alt="">
+                        <img src="img/banner/slideshow_2.webp" alt="">
 
                     </li>
                     <li>
-                        <img src="img/banner/tulanh.jpg" alt="">
+                        <img src="img/banner/slideshow_3.webp" alt="">
 
                     </li>
                     <li>
@@ -64,10 +64,10 @@
                     <c:forEach var="item" items="${listBestNew}">
                         <div class="prod-i">
                             <div class="prod-i-top">
-                                <a href="#" class="prod-i-img"><!-- NO SPACE -->
+                                <a class="prod-i-img"><!-- NO SPACE -->
                                     <img src="img\<c:out value="${item.image}"/>"><!-- NO SPACE --></a>
 
-                                <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
+                                <a href="cart-add?id=<c:out value="${item.id}"/>" class="prod-i-buy">Thêm vào giỏ</a>
                                 <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
 
                                 <div class="prod-i-properties">
@@ -77,7 +77,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="#"><c:out value="${item.name}"/></a>
+                                <a><c:out value="${item.name}"/></a>
                             </h3>
                             <p class="prod-i-price">
                                 <b><c:out value="${item.price}"/>VND</b>
@@ -104,11 +104,11 @@
                     <c:forEach var="item" items="${listPromotions}">
                         <div class="prod-i">
                             <div class="prod-i-top">
-                                <a href="#" class="prod-i-img"><!-- NO SPACE --><img
+                                <a class="prod-i-img"><!-- NO SPACE --><img
                                         src="img\<c:out value="${item.image}"/>"
                                 ><!-- NO SPACE --></a>
 
-                                <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
+                                <a href="cart-add?id=<c:out value="${item.id}"/>" class="prod-i-buy">Thêm vào giỏ</a>
                                 <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
 
                                 <div class="prod-i-properties">
@@ -118,7 +118,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="#"><c:out value="${item.name}"/></a>
+                                <a><c:out value="${item.name}"/></a>
                             </h3>
                             <p class="prod-i-price">
                                 <b><c:out value="${item.discount}"/>VND</b>
@@ -144,12 +144,12 @@
                     <c:forEach var="item" items="${listTopSeller}">
                         <div class="prod-i">
                             <div class="prod-i-top">
-                                <a href="#" class="prod-i-img"><!-- NO SPACE -->
+                                <a class="prod-i-img"><!-- NO SPACE -->
                                     <img src="img\<c:out value="${item.image}"/>"><!-- NO SPACE --></a>
                                 <!--<p class="prod-i-info">
                                    a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
                                </p>-->
-                                <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
+                                <a href="cart-add?id=<c:out value="${item.id}"/>" class="prod-i-buy">Thêm vào giỏ</a>
                                 <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
 
                                 <div class="prod-i-properties">
@@ -159,7 +159,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="#"><c:out value="${item.name}"/></a>
+                                <a><c:out value="${item.name}"/></a>
                             </h3>
                             <p class="prod-i-price">
                                 <c:if test="${item.discount != null}">
