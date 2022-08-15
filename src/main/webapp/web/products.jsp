@@ -14,35 +14,23 @@
             <div class="fr-slider">
                 <ul class="slides">
                     <li>
-                        <img src="img/banner/slideshow_1.webp" alt="">
+                        <img src="img/banner/tulanh.jpg" alt="">
 
                     </li>
                     <li>
-                        <img src="img/banner/slideshow_2.webp" alt="">
+                        <img src="img/banner/dieuhoa.png" alt="">
 
                     </li>
                     <li>
-                        <img src="img/banner/slideshow_3.webp" alt="">
+                        <img src="img/banner/tivi.png" alt="">
 
                     </li>
                     <li>
-                        <img src="img/banner/slideshow_4.webp" alt="">
+                        <img src="img/banner/maygiat.jpg" alt="">
 
                     </li>
                     <li>
-                        <img src="img/banner/slideshow_6.webp" alt="">
-
-                    </li>
-                    <li>
-                        <img src="img/banner/slideshow_8.webp" alt="">
-
-                    </li>
-                    <li>
-                        <img src="img/banner/slideshow_11.webp" alt="">
-
-                    </li>
-                    <li>
-                        <img src="img/banner/slideshow_1.webp" alt="">
+                        <img src="img/banner/all.png" alt="">
 
                     </li>
 
