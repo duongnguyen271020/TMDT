@@ -8,7 +8,7 @@
 <html lang="en">
 
 <head>
-    <title>Web Thuong Mai Dien Tu</title>
+    <title>WebThuongMaiDienTu</title>
 
     <link href="<c:url value="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic"/>"
           rel="stylesheet">
@@ -31,13 +31,13 @@
 
 <body>
 <!-- Header - start -->
-<jsp:include page="header.jsp"/>
+<jsp:include page="../header.jsp"/>
 
 <!-- Main Content - start -->
 <jsp:include page="products.jsp"/>
 
 <!-- Footer - start -->
-<jsp:include page="footer.jsp"/>
+<jsp:include page="../footer.jsp"/>
 
 <!-- jQuery plugins/scripts - start -->
 <script src="<c:url value="/js/jquery-1.11.2.min.js"/>"></script>

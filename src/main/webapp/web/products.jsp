@@ -14,15 +14,15 @@
             <div class="fr-slider">
                 <ul class="slides">
                     <li>
-                        <img src="img/banner/slideshow_1.webp" alt="">
+                        <img src="img/banner/tivi.png" alt="">
 
                     </li>
                     <li>
-                        <img src="img/banner/slideshow_2.webp" alt="">
+                        <img src="img/banner/dieuhoa.png" alt="">
 
                     </li>
                     <li>
-                        <img src="img/banner/slideshow_3.webp" alt="">
+                        <img src="img/banner/tulanh.jpg" alt="">
 
                     </li>
                     <li>
