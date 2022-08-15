@@ -136,7 +136,7 @@
                             <p>
                                 <label for="discount">Discount Amount</label><input type="text" name="discount"
                                                                                     id="discount"
-                                                                                    required>
+                                                                            required>
                             </p>
                             <p>
                                 <label for="status">Status</label><input type="text" name="status"

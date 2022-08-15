@@ -1,5 +1,8 @@
 package controllerWeb;
 
+import DAO.CategoryDAO;
+import model.Categories;
+import model.Model;
 import model.Product;
 import DAO.ProductDAO;
 
@@ -16,11 +19,19 @@ public class SearchController extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
-        String textSearch = request.getParameter("text");
+        String textSearch = request.getParameter("textSearch");
+
+        CategoryDAO categoryDAO = new CategoryDAO();
+        List<Categories> categories = categoryDAO.getAllCategory();
+        List<Model> models = categoryDAO.getAllModel();
+
+        request.setAttribute("categories", categories);
+        request.setAttribute("models", models);
+        request.setAttribute("isShow", true);
 
         ProductDAO productService = new ProductDAO();
         List<Product> products = productService.searchByNameProducts(textSearch);
         request.setAttribute("products", products);
-        request.getRequestDispatcher("/customer/product-list.jsp").forward(request, response);
+        request.getRequestDispatcher("/web/productView.jsp").forward(request, response);
     }
 }

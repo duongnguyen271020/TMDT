@@ -10,6 +10,7 @@ public class Cart implements Serializable {
     private Long productID;
     private String productName;
     private Double amount;
+    private String image;
 
     public Cart() {
     }
@@ -22,6 +23,14 @@ public class Cart implements Serializable {
         this.productID = productID;
         this.productName = productName;
         this.amount = amount;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public Long getId() {

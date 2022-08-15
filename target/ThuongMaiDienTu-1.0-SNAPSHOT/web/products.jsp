@@ -5,7 +5,6 @@
 <fmt:setLocale value="vi_VN"/>
 
 
-
 <main>
     <section class="container">
 
@@ -51,1059 +50,131 @@
             </div>
         </div>
 
-
         <!-- Popular Products -->
-        <div class="fr-pop-wrap">
-            <ul class="fr-pop-tabs sections-show">
-                <li><h4 class="active">sản phẩm bán chạy</h4></li>
-                <li><a href="LapTop.html">Xem thêm >></a></li>
-            </ul>
+        <c:if test="${isNew == true}">
+            <div class="fr-pop-wrap">
+                <ul class="fr-pop-tabs sections-show">
+                    <li><h4 class="active">sản phẩm mới nhất </h4></li>
+                    <li><a>Xem thêm >></a></li>
+                </ul>
 
-            <!-- Catalog Topbar - end -->
-            <div class="prod-items section-items">
+                <!-- Catalog Topbar - end -->
 
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
+                <div class="prod-items section-items">
+                    <c:forEach var="item" items="${listBestNew}">
+                        <div class="prod-i">
+                            <div class="prod-i-top">
+                                <a class="prod-i-img"><!-- NO SPACE -->
+                                    <img src="img\<c:out value="${item.image}"/>"><!-- NO SPACE --></a>
 
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
+                                <a href="cart-add?id=<c:out value="${item.id}"/>" class="prod-i-buy">Thêm vào giỏ</a>
+                                <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
+
+                                <div class="prod-i-properties">
+                                    <dl>
+                                        <c:out value="${item.description}"/>
+                                    </dl>
+                                </div>
+                            </div>
+                            <h3>
+                                <a><c:out value="${item.name}"/></a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b><c:out value="${item.price}"/>VND</b>
+                            </p>
                         </div>
-                    </div>
-                    <h3>
-                        <a href="#">Adipisci aperiam commodi</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$59</b>
-                    </p>
+                    </c:forEach>
                 </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Nulla numquam obcaecati</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$48</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Dignissimos eaque earum</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$37</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Porro quae quasi</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$85</b>
-                        <del>$110</del>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Sunt temporibus velit</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$115</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Harum illum incidunt</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$130</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="prod-sticker">
-                        <p class="prod-sticker-3">-20%</p>
-                    </div>
-                    <h3>
-                        <a href="#">Facilis illum</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$150</b>
-                        <del>$180</del>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="prod-sticker">
-                        <p class="prod-sticker-3">-20%</p>
-                    </div>
-                    <h3>
-                        <a href="#">Facilis illum</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$150</b>
-                        <del>$180</del>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Maxime molestias necessitatibus nobis</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$95</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="prod-sticker">
-                        <p class="prod-sticker-3">-20%</p>
-                    </div>
-                    <h3>
-                        <a href="#">Facilis illum</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$150</b>
-                        <del>$180</del>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Iusto labore laudantium</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$170</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-
-                        <div class="prod-sticker">
-                            <p class="prod-sticker-3">-30%</p>
-                            <p class="prod-sticker-4 countdown" data-date="29 Jan 2017, 14:30:00"></p>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Fuga impedit inciduntipsa</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$80</b>
-                    </p>
-                </div>
-
+                <!-- .fr-pop-tab-cont -->
             </div>
-        </div>
+        </c:if>
 
 
         <!-- Popular Products -->
-        <div class="fr-pop-wrap">
-            <ul class="fr-pop-tabs sections-show">
-                <li><h4 class="active">sản phẩm mới nhất </h4></li>
-                <li><a href="LapTop.html">Xem thêm >></a></li>
-            </ul>
+        <c:if test="${isDiscount == true}">
+            <div class="fr-pop-wrap">
+                <ul class="fr-pop-tabs sections-show">
+                    <li><h4 class="active">sản phẩm khuyến mãi</h4></li>
+                    <li><a>Xem thêm >></a></li>
+                </ul>
 
-            <!-- Catalog Topbar - end -->
-            <div class="prod-items section-items">
+                <!-- Catalog Topbar - end -->
 
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
+                <div class="prod-items section-items">
+                    <c:forEach var="item" items="${listPromotions}">
+                        <div class="prod-i">
+                            <div class="prod-i-top">
+                                <a class="prod-i-img"><!-- NO SPACE --><img
+                                        src="img\<c:out value="${item.image}"/>"
+                                ><!-- NO SPACE --></a>
 
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
+                                <a href="cart-add?id=<c:out value="${item.id}"/>" class="prod-i-buy">Thêm vào giỏ</a>
+                                <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
+
+                                <div class="prod-i-properties">
+                                    <dl>
+                                        <c:out value="${item.description}"/>
+                                    </dl>
+                                </div>
+                            </div>
+                            <h3>
+                                <a><c:out value="${item.name}"/></a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b><c:out value="${item.discount}"/>VND</b>
+                                <del><c:out value="${item.price}"/>VND</del>
+                            </p>
                         </div>
-                    </div>
-                    <h3>
-                        <a href="#">Adipisci aperiam commodi</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$59</b>
-                    </p>
+                    </c:forEach>
                 </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Nulla numquam obcaecati</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$48</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Dignissimos eaque earum</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$37</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Porro quae quasi</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$85</b>
-                        <del>$110</del>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Sunt temporibus velit</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$115</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Harum illum incidunt</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$130</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="prod-sticker">
-                        <p class="prod-sticker-3">-20%</p>
-                    </div>
-                    <h3>
-                        <a href="#">Facilis illum</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$150</b>
-                        <del>$180</del>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="prod-sticker">
-                        <p class="prod-sticker-3">-20%</p>
-                    </div>
-                    <h3>
-                        <a href="#">Facilis illum</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$150</b>
-                        <del>$180</del>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                            <a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                        </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Maxime molestias necessitatibus nobis</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$95</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                            a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                        </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="prod-sticker">
-                        <p class="prod-sticker-3">-20%</p>
-                    </div>
-                    <h3>
-                        <a href="#">Facilis illum</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$150</b>
-                        <del>$180</del>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                            <a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                        </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Iusto labore laudantium</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$170</b>
-                    </p>
-                </div>
-                <div class="prod-i">
-                    <div class="prod-i-top">
-                        <a href="#" class="prod-i-img"><!-- NO SPACE --><img
-                                src="img/hn002t_9702ad2e89f442ca838f4daeb978d93a_large.webp"
-                                alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
-                        <!--<p class="prod-i-info">
-                           a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
-                       </p>-->
-                        <a href="#" class="prod-i-buy">Thêm vào giỏ</a>
-                        <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
-
-                        <div class="prod-i-properties">
-                            <dl>
-                                <dt>Exterior</dt>
-                                <dd>Silt Pocket<br></dd>
-                                <dt>Material</dt>
-                                <dd>PU<br></dd>
-                                <dt>Occasion</dt>
-                                <dd>Versatile<br></dd>
-                                <dt>Shape</dt>
-                                <dd>Casual Tote<br></dd>
-                                <dt>Pattern Type</dt>
-                                <dd>Solid<br></dd>
-                                <dt>Style</dt>
-                                <dd>American Style<br></dd>
-                                <dt>Hardness</dt>
-                                <dd>Soft<br></dd>
-                                <dt>Decoration</dt>
-                                <dd>None<br></dd>
-                                <dt>Closure Type</dt>
-                                <dd>Zipper<br></dd>
-                            </dl>
-                        </div>
-
-                        <div class="prod-sticker">
-                            <p class="prod-sticker-3">-30%</p>
-                            <p class="prod-sticker-4 countdown" data-date="29 Jan 2017, 14:30:00"></p>
-                        </div>
-                    </div>
-                    <h3>
-                        <a href="#">Fuga impedit inciduntipsa</a>
-                    </h3>
-                    <p class="prod-i-price">
-                        <b>$80</b>
-                    </p>
-                </div>
-
             </div>
-            <!-- .fr-pop-tab-cont -->
+        </c:if>
 
 
-        </div>
+        <!-- Popular Products -->
+        <c:if test="${isSeller == true}">
+            <div class="fr-pop-wrap">
+                <ul class="fr-pop-tabs sections-show">
+                    <li><h4 class="active">sản phẩm bán chạy</h4></li>
+                    <li><a>Xem thêm >></a></li>
+                </ul>
 
+                <!-- Catalog Topbar - end -->
+                <div class="prod-items section-items">
+                    <c:forEach var="item" items="${listTopSeller}">
+                        <div class="prod-i">
+                            <div class="prod-i-top">
+                                <a class="prod-i-img"><!-- NO SPACE -->
+                                    <img src="img\<c:out value="${item.image}"/>"><!-- NO SPACE --></a>
+                                <!--<p class="prod-i-info">
+                                   a href="#" class="qview-btn prod-i-qview"><span>Xem nhanh  </span><i class="fa fa-search"></i></a>
+                               </p>-->
+                                <a href="cart-add?id=<c:out value="${item.id}"/>" class="prod-i-buy">Thêm vào giỏ</a>
+                                <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
+
+                                <div class="prod-i-properties">
+                                    <dl>
+                                        <c:out value="${item.description}"/>
+                                    </dl>
+                                </div>
+                            </div>
+                            <h3>
+                                <a><c:out value="${item.name}"/></a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <c:if test="${item.discount != null}">
+                                    <b><c:out value="${item.discount}"/>VND</b>
+                                    <del><c:out value="${item.price}"/>VND</del>
+                                </c:if>
+                                <c:if test="${item.discount == null}">
+                                    <b><c:out value="${item.price}"/>VND</b>
+                                </c:if>
+                            </p>
+                        </div>
+                    </c:forEach>
+                </div>
+            </div>
+        </c:if>
 
         <!-- Subscribe Form -->
         <div class="newsletter">
