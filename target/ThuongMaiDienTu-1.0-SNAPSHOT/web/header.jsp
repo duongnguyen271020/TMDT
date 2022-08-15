@@ -25,11 +25,11 @@
                         </form>
                     </li>
                     <li class="topauth">
-                        <a href="auth.html">
+                        <a href="../login.html">
                             <i class="fa fa-lock"></i>
                             <span class="shop-menu-ttl">Đăng kí</span>
                         </a>
-                        <a href="auth.html">
+                        <a href="../login.html">
                             <span class="shop-menu-ttl">Đăng nhập</span>
                         </a>
                     </li>
