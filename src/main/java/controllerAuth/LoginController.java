@@ -14,7 +14,7 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("isShow", false);
-        request.getRequestDispatcher("login/login.jsp").forward(request,response);
+        request.getRequestDispatcher("login/login.jsp").forward(request, response);
     }
 
     @Override
@@ -34,11 +34,19 @@ public class LoginController extends HttpServlet {
             request.getRequestDispatcher("/account/login.jsp").forward(request, response);
         } else {
             if (remember != null) {
-                HttpSession session = request.getSession();
-                session.setAttribute("account", user);
+                Cookie cookie = new Cookie("email", email);
+                Cookie cookie1 = new Cookie("password", password);
+                response.addCookie(cookie);
+                response.addCookie(cookie1);
             }
+            HttpSession session = request.getSession();
+            session.setAttribute("user", user);
             request.setAttribute("massage", "Đăng nhập thành công");
-            response.sendRedirect("home");
+            if (user.getRole() == true) {
+                response.sendRedirect("admin");
+            } else {
+                response.sendRedirect("home");
+            }
         }
     }
 }

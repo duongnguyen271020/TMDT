@@ -75,6 +75,26 @@ public class OrderDAO {
         return item;
     }
 
+    public Orders findOrderByUserID(Long userID) {
+        String sql = "select * from Orders where UserID = ? and Status = 1";
+        Orders item = new Orders();
+        try {
+            PreparedStatement statement = DBConnect.connect().getConnection().prepareStatement(sql);
+            statement.setLong(1, userID);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                item.setId(rs.getLong("ID"));
+                item.setTotalAmount(rs.getDouble("TotalAmount"));
+                item.setUserID(rs.getLong("UserID"));
+                item.setUserName(rs.getString("UserName"));
+                item.setStatus(rs.getInt("Status"));
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            e.getMessage();
+        }
+        return item;
+    }
+
 
     public boolean paymentOrder(Long userId) {
 

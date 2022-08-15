@@ -167,26 +167,26 @@ public class CategoryDAO {
 //        return categories;
 //    }
 
-    public Model getModelByName(String categoryName) {
-        Model model = new Model();
-        try {
-            String sql = "select * from Model where name = ?";
-
-            PreparedStatement preparedStatement = DBConnect.connect().getConnection().prepareStatement(sql);
-            preparedStatement.setString(1, categoryName);
-            ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()) {
-
-                model.setId(rs.getLong("ID"));
-                model.setName(rs.getString("Name"));
-                model.setCategoryID(rs.getLong("CategoryID"));
-                model.setCategoryName(rs.getString("CategoryName"));
-            }
-        } catch (SQLException | ClassNotFoundException e) {
-            e.getMessage();
-        }
-        return model;
-    }
+//    public Model getModelByName(String categoryName) {
+//        Model model = new Model();
+//        try {
+//            String sql = "select * from Model where name = ?";
+//
+//            PreparedStatement preparedStatement = DBConnect.connect().getConnection().prepareStatement(sql);
+//            preparedStatement.setString(1, categoryName);
+//            ResultSet rs = preparedStatement.executeQuery();
+//            while (rs.next()) {
+//
+//                model.setId(rs.getLong("ID"));
+//                model.setName(rs.getString("Name"));
+//                model.setCategoryID(rs.getLong("CategoryID"));
+//                model.setCategoryName(rs.getString("CategoryName"));
+//            }
+//        } catch (SQLException | ClassNotFoundException e) {
+//            e.getMessage();
+//        }
+//        return model;
+//    }
 
     public List<Model> getAllModelByCategoryID(Long id) {
         List<Model> res = new ArrayList<>();
