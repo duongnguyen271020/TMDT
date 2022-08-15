@@ -15,6 +15,10 @@ public class Categories implements Serializable {
         this.categoryName = categoryName;
     }
 
+    public Categories(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
     public Long getId() {
         return id;
     }

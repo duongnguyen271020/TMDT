@@ -28,6 +28,27 @@ public class Product implements Serializable {
         this.saQuantity = saQuantity;
     }
 
+    public Product(String name, String image, Double price, Double discount, Boolean status, String description, Long itemCategoryID) {
+        this.name = name;
+        this.image = image;
+        this.price = price;
+        this.discount = discount;
+        this.status = status;
+        this.description = description;
+        this.itemCategoryID = itemCategoryID;
+    }
+
+    public Product(Long id, String name, String image, Double price, Double discount, Boolean status, String description, Long itemCategoryID) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
+        this.price = price;
+        this.discount = discount;
+        this.status = status;
+        this.description = description;
+        this.itemCategoryID = itemCategoryID;
+    }
+
     public Long getId() {
         return id;
     }
