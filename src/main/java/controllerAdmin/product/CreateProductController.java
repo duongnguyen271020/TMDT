@@ -50,7 +50,7 @@ public class CreateProductController extends HttpServlet {
             Part filePart = request.getPart("file");
             fileName = filePart.getSubmittedFileName();
             for (Part part : request.getParts()) {
-                part.write("C:\\Users\\DELL\\Documents\\TMDT\\src\\main\\webapp\\img\\" + fileName);
+                part.write("C:\\Users\\DELL\\Documents\\TMDT\\src\\main\\webapp\\img\\product\\" + fileName);
             }
         } catch (Exception e) {
             e.getMessage();

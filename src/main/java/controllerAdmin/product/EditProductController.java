@@ -57,7 +57,7 @@ public class EditProductController extends HttpServlet {
         if (filePart != null) {
             fileName = filePart.getSubmittedFileName();
             for (Part part : request.getParts()) {
-                part.write("D:\\Pro1\\WebTMDT\\src\\main\\webapp\\img\\product\\" + fileName);
+                part.write("C:\\Users\\DELL\\Documents\\TMDT\\src\\main\\webapp\\img\\product\\" + fileName);
             }
         } else {
             Product product = productDAO.findProductById(id);

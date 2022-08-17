@@ -27,6 +27,7 @@ controllerAdmin\categories\CreateCategoryController.class
 controllerAuth\RegisterController.class
 model\User.class
 DAO\OrderDAO.class
+controllerWeb\SingleController.class
 DAO\HomeDAO.class
 controllerWeb\SearchModelController.class
 controllerAuth\LogoutController.class

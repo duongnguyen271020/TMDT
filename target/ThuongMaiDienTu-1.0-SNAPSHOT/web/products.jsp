@@ -53,7 +53,7 @@
                         <div class="prod-i">
                             <div class="prod-i-top">
                                 <a class="prod-i-img"><!-- NO SPACE -->
-                                    <img src="img\<c:out value="${item.image}"/>"><!-- NO SPACE --></a>
+                                    <img src="img\product\<c:out value="${item.image}"/>"><!-- NO SPACE --></a>
 
                                 <a href="cart-add?id=<c:out value="${item.id}"/>" class="prod-i-buy">Thêm vào giỏ</a>
                                 <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a><c:out value="${item.name}"/></a>
+                                <a href="detail?id=<c:out value="${item.id}"/>"><c:out value="${item.name}"/></a>
                             </h3>
                             <p class="prod-i-price">
                                 <b><c:out value="${item.price}"/>VND</b>
@@ -106,7 +106,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a><c:out value="${item.name}"/></a>
+                                <a href="detail?id=<c:out value="${item.id}"/>"><c:out value="${item.name}"/></a>
                             </h3>
                             <p class="prod-i-price">
                                 <b><c:out value="${item.discount}"/>VND</b>
@@ -147,7 +147,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a><c:out value="${item.name}"/></a>
+                                <a href="detail?id=<c:out value="${item.id}"/>"><c:out value="${item.name}"/></a>
                             </h3>
                             <p class="prod-i-price">
                                 <c:if test="${item.discount != null}">

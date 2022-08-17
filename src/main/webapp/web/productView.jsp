@@ -112,7 +112,7 @@
                             </div>
                         </div>
                         <h3>
-                            <a><c:out value="${item.name}"/></a>
+                            <a href="detail?id=<c:out value="${item.id}"/>"><c:out value="${item.name}"/></a>
                         </h3>
                         <p class="prod-i-price">
                             <c:if test="${item.discount != null}">
